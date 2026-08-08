@@ -1,8 +1,13 @@
 name: Github Contexts
+run-name: custom workflow run name - ${{inputs.debug}}
 
 on:
   push:
   workflow_dispatch:
+    inputs:  
+      debug:
+        type: boolean
+        default: false
 
 jobs:
   echo-data:
